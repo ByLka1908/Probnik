@@ -1,0 +1,55 @@
+﻿<Window x:Class="WpfApp7.View.AddGameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp7.View"
+        mc:Ignorable="d"
+        Title="Add Game" MinHeight="500" MinWidth="400" MaxHeight="750" MaxWidth="600"
+        SizeToContent="WidthAndHeight" FontFamily="Verdana" Icon="/Image\Icon.png">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column ="0">
+            <Button Margin="10" x:Name="btBack" Click="btBack_Click"
+                    Background="Aqua">Back</Button>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <Label Margin="5">Name:</Label>
+                <TextBox x:Name="tbName" Width="100" Background="AntiqueWhite" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <Label Margin="5">Price:</Label>
+                <TextBox x:Name="tbPrice" Width="100" Background="AntiqueWhite" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <Label Margin="5">Description:</Label>
+                <TextBox x:Name="tbDescription" Width="100" Background="AntiqueWhite" Margin="5"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <Label Margin="5">Image:</Label>
+                <TextBox x:Name="tbImage" Width="100" Background="AntiqueWhite" Margin="5"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <Label Margin="5">Steam:</Label>
+                <ComboBox x:Name="cbSteam" Margin="5"></ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <Label Margin="5">Epic:</Label>
+                <ComboBox x:Name="cbEpic" Margin="5"></ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <Label Margin="5">Ubisoft:</Label>
+                <ComboBox x:Name="cbUbisoft" Margin="5"></ComboBox>
+            </StackPanel>
+
+            <Button x:Name="btSave" Click="btSave_Click" Margin="10"
+                    Background="Aqua">Save</Button>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfApp7.View.MenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp7.View"
+        mc:Ignorable="d"
+        Title="Menu" MinHeight="300" MinWidth="600" MaxHeight="450" MaxWidth="900"
+        SizeToContent="WidthAndHeight" FontFamily="Verdana" Icon="/Image\Icon.png">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0">
+            <Button Margin="10" x:Name="btBack" Click="btBack_Click"
+                    Background="Aqua">Back</Button>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <Button Margin="10" x:Name="btAllGame" Click="btAllGame_Click"
+                    Background="Aqua">All game</Button>
+
+            <Button Margin="10" x:Name="btAddGame" Click="btAddGame_Click"
+                    Background="Aqua">Add game</Button>
+        </StackPanel>
+    </Grid>
+</Window>
