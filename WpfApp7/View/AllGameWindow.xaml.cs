@@ -47,5 +47,27 @@ namespace WpfApp7.View
             menu.Show();
             this.Close();
         }
+
+        private void tbSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var s = content.Where(x => x.Games.Name.ToUpper().StartsWith
+            (tbSearch.Text.ToUpper()) || x.Games.Description.ToUpper().StartsWith(tbSearch.Text.ToUpper())).ToList();
+            if (s.Count < 1)
+            {
+                MessageBox.Show("Object not folder");
+                tbSearch.Text = string.Empty;
+                content = BL.GetGame.GetGames();
+                lbContent.ItemsSource = content;
+                return;
+            }
+            if (tbSearch.Text == string.Empty)
+            {
+                content = BL.GetGame.GetGames();
+                lbContent.ItemsSource = content;
+                return;
+            }
+            content = s;
+            lbContent.ItemsSource = content;
+        }
     }
 }
