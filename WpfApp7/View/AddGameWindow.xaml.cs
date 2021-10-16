@@ -30,7 +30,7 @@ namespace WpfApp7.View
             cbEpic.ItemsSource = BL.GetStore.GetEpic();
             cbUbisoft.ItemsSource = BL.GetStore.GetUbisoft();
         }
-
+        ///Coment
         private void btSave_Click(object sender, RoutedEventArgs e)
         {
             try
