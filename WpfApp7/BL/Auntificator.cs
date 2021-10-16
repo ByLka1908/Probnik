@@ -8,6 +8,13 @@ namespace WpfApp7.BL
 {
     class Auntificator
     {
+
+        /// <summary>
+        /// Аунтификация
+        /// </summary>
+        /// <param name="login"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public static DB.User Auntification(string login, string password)
         {
             try
