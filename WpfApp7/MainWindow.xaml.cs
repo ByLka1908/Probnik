@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp7.BL;
 
 namespace WpfApp7
 {
@@ -30,15 +31,12 @@ namespace WpfApp7
             try
             {
                 BL.Auntificator.Auntification(tbLogin.Text, tbPassword.Text);
-                View.MenuWindow menu = new View.MenuWindow();
-                menu.Show();
-                this.Close();
+                WindowOpen.OpenNewWindow(this, new View.MenuWindow());
             }
             catch
             {
                 MessageBox.Show("Error");
             }
-
         }
 
         private void btExist_Click(object sender, RoutedEventArgs e)

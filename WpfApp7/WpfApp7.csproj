@@ -70,6 +70,7 @@
     <Compile Include="BL\GetGame.cs" />
     <Compile Include="BL\GetStore.cs" />
     <Compile Include="BL\ViewGame.cs" />
+    <Compile Include="BL\WindowOpen.cs" />
     <Compile Include="DB\Epic.cs">
       <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
