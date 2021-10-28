@@ -24,7 +24,7 @@ namespace WpfApp7.BL
             }
             catch
             {
-                throw new Exception("Error");
+                throw new Exception("Ошибка иницилизации добавления");
             }
             if (games == null)
             {
@@ -39,7 +39,7 @@ namespace WpfApp7.BL
             }
             catch
             {
-                throw new Exception("Error");
+                throw new Exception("Ошибка добавлении");
             }
         }
 
@@ -52,7 +52,7 @@ namespace WpfApp7.BL
             }
             catch
             {
-                throw new Exception("Error");
+                throw new Exception("Ошибка при получении Стима");
             }
         }
 
@@ -65,7 +65,7 @@ namespace WpfApp7.BL
             }
             catch
             {
-                throw new Exception("Error");
+                throw new Exception("Ошибка при получении Епик геймс");
             }
         }
         private static int GetUbisoft(string store)
@@ -77,7 +77,7 @@ namespace WpfApp7.BL
             }
             catch
             {
-                throw new Exception("Error");
+                throw new Exception("ОШибка при получении Юбисофт");
             }
         }
 
@@ -97,7 +97,7 @@ namespace WpfApp7.BL
             }
             catch
             {
-                throw new Exception("Error");
+                throw new Exception("Ошибка иницилизации редактирования");
             }
             if (games == null)
             {
@@ -112,7 +112,7 @@ namespace WpfApp7.BL
             }
             catch
             {
-                throw new Exception("Error");
+                throw new Exception("Ошибка редактирования");
             }
         }
     }

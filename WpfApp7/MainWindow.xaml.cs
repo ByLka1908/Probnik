@@ -33,9 +33,9 @@ namespace WpfApp7
                 BL.Auntificator.Auntification(tbLogin.Text, tbPassword.Text);
                 WindowOpen.OpenNewWindow(this, new View.MenuWindow());
             }
-            catch
+            catch(Exception ex)
             {
-                MessageBox.Show("Error");
+                MessageBox.Show(ex.ToString());
             }
         }
 

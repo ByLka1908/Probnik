@@ -30,25 +30,76 @@ namespace WpfApp7.View
             cbEpic.ItemsSource = BL.GetStore.GetEpic();
             cbUbisoft.ItemsSource = BL.GetStore.GetUbisoft();
         }
-        ///Coment
+
         private void btSave_Click(object sender, RoutedEventArgs e)
         {
+
+            #region Валидация
             try
             {
-                BL.AddAndChangeGame.AddGames(tbName.Text, tbPrice.Text, tbDescription.Text, tbImage.Text, cbSteam.SelectedItem, cbEpic.SelectedItem, cbUbisoft.SelectedItem);
-                MessageBox.Show("Complete");
+                int q = Convert.ToInt32(tbPrice.Text);
             }
             catch
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("Укажите цену в правильном формате");
+                return;
+            }
+
+            if (tbName.Text == string.Empty)
+            {
+                MessageBox.Show("Введите имя");
+                return;
+
+            }
+            if (tbPrice.Text == string.Empty)
+            {
+                MessageBox.Show("Введите цену");
+                return;
+
+            }
+            if (tbDescription.Text == string.Empty)
+            {
+                MessageBox.Show("Введите описание");
+                return;
+
+            }
+
+            if (cbSteam.SelectedIndex == -1)
+            {
+                MessageBox.Show("Укажите есть ли игра в стиме");
+                return;
+
+            }
+            if (cbEpic.SelectedIndex == -1)
+            {
+                MessageBox.Show("Укажите есть ли игра в епик геймс");
+                return;
+
+            }
+            if (cbUbisoft.SelectedIndex == -1)
+            {
+                MessageBox.Show("Укажите есть ли игра в юбисофте");
+                return;
+            }
+            #endregion
+
+            try
+            {
+                if (MessageBox.Show("Вы уверены что хотите добавить игру?", "Добавить", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                {
+                    BL.AddAndChangeGame.AddGames(tbName.Text, tbPrice.Text, tbDescription.Text, tbImage.Text, cbSteam.SelectedItem, cbEpic.SelectedItem, cbUbisoft.SelectedItem);
+                    MessageBox.Show("Успешно добавленно");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
 
         private void btBack_Click(object sender, RoutedEventArgs e)
         {
-            MenuWindow menu = new MenuWindow();
-            menu.Show();
-            this.Close();
+            BL.WindowOpen.OpenNewWindow(this, new MenuWindow());
         }
     }
 }

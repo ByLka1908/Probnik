@@ -28,12 +28,12 @@ namespace WpfApp7.BL
                 }
                 else
                 {
-                    throw new Exception("Error");
+                    throw new Exception();
                 }
             }
-            catch
+            catch(Exception)
             {
-                throw new Exception("Error");
+                throw new Exception("Проблемы с аунтификацией");
             }
         }
     }

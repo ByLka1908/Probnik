@@ -19,9 +19,9 @@ namespace WpfApp7.BL
         {
             Games = games;
             Image = string.IsNullOrWhiteSpace(games.ImagePatch) ? @"/ImageDef.jpg" : games.ImagePatch;
-            Name = $"Name: {games.Name}";
-            Price = $"Price: {games.Price}";
-            Description = $"Description: {games.Description}";
+            Name = $"Имя: {games.Name}";
+            Price = $"Деньги: {games.Price}";
+            Description = $"Описание: {games.Description}";
             SteamEpic = $"Steam: {games.Steam.YesOrNo}   Epic: {games.Epic.YesOrNo}";
             Ubisoft = $"Ubisoft: {games.Ubisoft.YesOrNo}";
         }

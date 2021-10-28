@@ -18,7 +18,7 @@ namespace WpfApp7.BL
             }
             catch
             {
-                throw new Exception("error");
+                throw new Exception("Ошибка при удалении");
             }
         }
     }

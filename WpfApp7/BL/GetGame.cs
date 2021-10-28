@@ -21,9 +21,9 @@ namespace WpfApp7.BL
                 }
                 return view;
             }
-            catch
+            catch(Exception ex)
             {
-                throw new Exception("Error");
+                throw new Exception(ex.ToString());
             }
         }
     }

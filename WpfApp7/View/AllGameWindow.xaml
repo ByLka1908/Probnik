@@ -33,7 +33,7 @@
             <ListBox x:Name="lbContent">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <Border BorderBrush="Black" BorderThickness="1">
+                        <Border BorderBrush="Black" BorderThickness="1" ToolTip="Нажмите два раза для редактирования">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition/>

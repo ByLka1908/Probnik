@@ -26,23 +26,17 @@ namespace WpfApp7.View
 
         private void btAddGame_Click(object sender, RoutedEventArgs e)
         {
-            AddGameWindow add = new AddGameWindow();
-            add.Show();
-            this.Close();
+            BL.WindowOpen.OpenNewWindow(this, new AddGameWindow());
         }
 
         private void btAllGame_Click(object sender, RoutedEventArgs e)
         {
-            AllGameWindow all = new AllGameWindow();
-            all.Show();
-            this.Close();
+            BL.WindowOpen.OpenNewWindow(this, new AllGameWindow());
         }
 
         private void btBack_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow main = new MainWindow();
-            main.Show();
-            this.Close();
+            BL.WindowOpen.OpenNewWindow(this, new MainWindow());
         }
     }
 }

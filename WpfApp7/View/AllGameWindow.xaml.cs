@@ -36,25 +36,26 @@ namespace WpfApp7.View
                 return;
             }
             var game = sours.DataContext as BL.ViewGame;
-            ChangeGameWindow change = new ChangeGameWindow(game);
-            change.Show();
-            this.Close();
+            BL.WindowOpen.OpenNewWindow(this, new ChangeGameWindow(game));
         }
 
         private void btBack_Click(object sender, RoutedEventArgs e)
         {
-            MenuWindow menu = new MenuWindow();
-            menu.Show();
-            this.Close();
+            BL.WindowOpen.OpenNewWindow(this, new MenuWindow());
         }
 
+        /// <summary>
+        /// Поиск
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
             var s = content.Where(x => x.Games.Name.ToUpper().StartsWith
             (tbSearch.Text.ToUpper()) || x.Games.Description.ToUpper().StartsWith(tbSearch.Text.ToUpper())).ToList();
             if (s.Count < 1)
             {
-                MessageBox.Show("Object not folder");
+                MessageBox.Show("Обьект не найден");
                 tbSearch.Text = string.Empty;
                 content = BL.GetGame.GetGames();
                 lbContent.ItemsSource = content;

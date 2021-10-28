@@ -16,9 +16,9 @@ namespace WpfApp7.BL
                 var game = entities.Steam.Select(x => x.YesOrNo).ToList();
                 return game;
             }
-            catch
+            catch(Exception ex)
             {
-                throw new Exception("error");
+                throw new Exception(ex.ToString());
             }
         }
 
@@ -30,9 +30,9 @@ namespace WpfApp7.BL
                 var game = entities.Ubisoft.Select(x => x.YesOrNo).ToList();
                 return game;
             }
-            catch
+            catch(Exception ex)
             {
-                throw new Exception("error");
+                throw new Exception(ex.ToString());
             }
         }
 
@@ -44,9 +44,9 @@ namespace WpfApp7.BL
                 var game = entities.Epic.Select(x => x.YesOrNo).ToList();
                 return game;
             }
-            catch
+            catch(Exception ex)
             {
-                throw new Exception("error");
+                throw new Exception(ex.ToString());
             }
         }
     }
